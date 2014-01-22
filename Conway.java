@@ -10,17 +10,18 @@ public class Conway implements ActionListener
     public JPanel panelBoard;
     public BoardButton[][] board;
     public Timer timer;
+    public int dim=150; //edit this to change size of space. default is 150 x 150 boxes.
     
     public Conway()
     {
         frame=new JFrame("Conway's Game of Life");
         frame.setLayout(new BorderLayout());
         panelBoard=new JPanel();
-        panelBoard.setLayout(new GridLayout(100,100));
-        board=new BoardButton[100][100]; 
-        for(int y=0; y<100; y++)
+        panelBoard.setLayout(new GridLayout(dim,dim));
+        board=new BoardButton[dim][dim]; 
+        for(int y=0; y<dim; y++)
         {
-            for(int x=0; x<100; x++)
+            for(int x=0; x<dim; x++)
             {
                 BoardButton button=new BoardButton(frame, panelBoard);
                 panelBoard.add(button);
@@ -48,6 +49,7 @@ public class Conway implements ActionListener
         frame.add(menu, BorderLayout.NORTH);
         frame.add(panelBoard,BorderLayout.CENTER);
         frame.pack();
+        frame.setSize(new Dimension(1000,1000));
         frame.setVisible(true);
     }
     public void actionPerformed(ActionEvent e)
