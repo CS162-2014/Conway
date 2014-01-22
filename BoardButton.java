@@ -6,6 +6,7 @@ public class BoardButton extends JButton implements ActionListener
     public boolean alive;
     public JFrame frame;
     public JPanel board;
+    public int surround;
     
     public BoardButton(JFrame fr, JPanel b)
     {
@@ -25,6 +26,24 @@ public class BoardButton extends JButton implements ActionListener
         }
         else
             setBackground(Color.WHITE);
+    }
+    public void eval()
+    {
+        if(surround <2)
+        {
+            alive=false;
+            setBackground(Color.WHITE);
+        }
+        if(surround>3)
+        {
+            alive=false;
+            setBackground(Color.WHITE);
+        }
+        if(surround==3)
+        {
+            alive=true;
+            setBackground(Color.BLACK);
+        }
     }
 }
     
