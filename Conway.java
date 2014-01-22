@@ -11,6 +11,9 @@ public class Conway implements ActionListener
     public BoardButton[][] board;
     public Timer timer;
     public int dim=150; //edit this to change size of space. default is 150 x 150 boxes.
+    public int speed=100; //edit this to change animate speed, 100 (fast) is default this is good for long evolutions 
+                            // The lower the speed number, the faster. 
+                            // If you have a shorter "evolution", increase the number, to see more intermediary steps
     
     public Conway()
     {
@@ -74,7 +77,7 @@ public class Conway implements ActionListener
                 {
                     step();
                 }
-            }, 10, 500);
+            }, 10, speed);
         }
         else if(e.getSource()==(Object)(noauto))
         {
@@ -105,7 +108,6 @@ public class Conway implements ActionListener
             startx=startingx;
             while(startx<=x+1 && startx<board[0].length)
             {
-                //System.out.println(starty+" "+startx+" "+board[starty][startx].alive);
                 if(starty==y && startx ==x)
                 {
                 }
