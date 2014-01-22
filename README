@@ -1,0 +1,11 @@
+Gui in progress...
+Conway Game of Life
+instructions:
+javac Conway.java
+javac BoardButton.java
+java Conway
+click on squares to activate them. Then, click step to see each generation, or click animate to see steps in succession. to stop, click
+stop animation and clear. while, animating, you can still click on squares to bring them to life. 
+if you've cleared, and everytime you click on a square, it dissapears, you still have a timer going, click on stop animation then continue.
+questions?
+e-mail linuxbash8@gmail.com or alsnyder@uchicago.edu
