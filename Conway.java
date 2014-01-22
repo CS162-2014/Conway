@@ -16,11 +16,11 @@ public class Conway implements ActionListener
         frame=new JFrame("Conway's Game of Life");
         frame.setLayout(new BorderLayout());
         panelBoard=new JPanel();
-        panelBoard.setLayout(new GridLayout(10,10));
-        board=new BoardButton[10][10]; 
-        for(int y=0; y<10; y++)
+        panelBoard.setLayout(new GridLayout(100,100));
+        board=new BoardButton[100][100]; 
+        for(int y=0; y<100; y++)
         {
-            for(int x=0; x<10; x++)
+            for(int x=0; x<100; x++)
             {
                 BoardButton button=new BoardButton(frame, panelBoard);
                 panelBoard.add(button);
